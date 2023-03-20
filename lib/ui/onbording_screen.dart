@@ -1,4 +1,7 @@
+import 'package:bank_app_project/ui/widgets/button.dart';
 import 'package:flutter/material.dart';
+
+import '../const/app_colors.dart';
 
 class Onboarding extends StatefulWidget {
   @override
@@ -57,13 +60,16 @@ class _OnboardingState extends State<Onboarding> {
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(20),
                     topLeft: Radius.circular(20)),
-                color: Colors.green,
+                color: AppColors.deep_green,
               ),
               child: Padding(
-                padding: const EdgeInsets.only(top: 30, left: 25, right: 25),
+                padding: const EdgeInsets.only(top: 50, left: 35, right: 35),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: 30,
+                    ),
                     Text(
                       items[_currentIndex]['title'],
                       style: TextStyle(
@@ -71,8 +77,8 @@ class _OnboardingState extends State<Onboarding> {
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
-                    Divider(
-                      color: Colors.transparent,
+                    SizedBox(
+                      height: 30,
                     ),
                     Text(items[_currentIndex]['description'],
                         textAlign: TextAlign.center,
@@ -80,31 +86,23 @@ class _OnboardingState extends State<Onboarding> {
                             fontSize: 18,
                             color: Colors.white,
                             fontWeight: FontWeight.bold)),
-                    Divider(
-                      color: Colors.transparent,
-                    ),
                     SizedBox(
-                      width: 400,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _currentIndex += 1;
-                            setState(() {});
-                            print(_currentIndex);
+                      height: 30,
+                    ),
+                    CustomButton(
+                      onTap: () {
+                        if (_currentIndex < 2) {
+                          setState(() {});
+                          _currentIndex++;
+                        } else
+                          Navigator.pushNamed(context, '/login');
+                      },
 
-                            if (_currentIndex >= 2) {
-                              if (_currentIndex > 2) {
-                                Navigator.pushNamed(context, '/login');
-                                _currentIndex = 2;
-                              }
-                            }
-                          },
-                          style:
-                              ElevatedButton.styleFrom(primary: Colors.black),
-                          child: Text('Login',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 20))),
+                      buttonText: 'LOGIN',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                      buttonColor: Colors.black,
+                      textColor: Colors.white,
+                      // BorderRadius: 10,
                     ),
                     SizedBox(
                       height: 30,

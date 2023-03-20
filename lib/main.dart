@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'package:bank_app_project/home_page.dart';
+import 'package:bank_app_project/ui/route/dashboard.dart';
 import 'package:bank_app_project/ui/route/forgetpage.dart';
 import 'package:bank_app_project/ui/route/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'ui/onbording_screen.dart';
 
@@ -17,16 +19,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {
-        '/splash': (_) => Splash(),
-        '/onboarding': (_) => Onboarding(),
-        '/homePage': (_) => HomePage(),
-        '/login': (_) => LoginPage(),
-        '/forgetpage': (_) => ForgetPage(),
+    return ScreenUtilInit(
+      designSize: Size(375, 812),
+      builder: (BuildContext context, Widget? child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          routes: {
+            '/splash': (_) => Splash(),
+            '/onboarding': (_) => Onboarding(),
+            '/homePage': (_) => HomePage(),
+            '/login': (_) => LoginPage(),
+            '/forgetpage': (_) => ForgetPage(),
+            '/dashboard': (_) => DashBoard(),
+          },
+          initialRoute: '/splash',
+        );
       },
-      initialRoute: '/splash',
     );
   }
 }
@@ -58,8 +66,8 @@ class _SplashState extends State<Splash> {
           children: [
             Image.asset(
               'assets/logo/image 16.png',
-              height: 100,
-              width: 100,
+              height: 100.h,
+              width: 100.w,
             ),
           ],
         ),
