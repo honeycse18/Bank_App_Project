@@ -146,7 +146,7 @@ class LoginPage extends StatelessWidget {
                         width: 300.w,
                         child: CustomButton(
                           onTap: () {
-                            Navigator.pushNamed(context, '/dashboard');
+                            Navigator.pushNamed(context, '/bottomNavBar');
                           },
 
                           buttonText: 'LOGIN',

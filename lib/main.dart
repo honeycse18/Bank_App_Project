@@ -1,5 +1,8 @@
 import 'dart:async';
 import 'package:bank_app_project/home_page.dart';
+import 'package:bank_app_project/ui/bottom_nav_bar/Pages/wallet.dart';
+import 'package:bank_app_project/ui/bottom_nav_bar/Pages/withdraw.dart';
+import 'package:bank_app_project/ui/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:bank_app_project/ui/route/dashboard.dart';
 import 'package:bank_app_project/ui/route/forgetpage.dart';
 import 'package:bank_app_project/ui/route/login.dart';
@@ -31,6 +34,9 @@ class MyApp extends StatelessWidget {
             '/login': (_) => LoginPage(),
             '/forgetpage': (_) => ForgetPage(),
             '/dashboard': (_) => DashBoard(),
+            '/bottomNavBar': (_) => BottomNavController(),
+            '/wallet': (_) => Wallet(),
+            '/withdraw': (_) => Withdraw(),
           },
           initialRoute: '/splash',
         );
@@ -38,7 +44,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+//error ta kon screen e dekhasse..login koren
 class Splash extends StatefulWidget {
   const Splash({super.key});
 

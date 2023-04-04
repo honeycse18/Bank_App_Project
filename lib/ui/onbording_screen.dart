@@ -1,4 +1,5 @@
 import 'package:bank_app_project/ui/widgets/button.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 
 import '../const/app_colors.dart';
@@ -30,7 +31,7 @@ class _OnboardingState extends State<Onboarding> {
     }
   ];
 
-  int _currentIndex = 0;
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +44,20 @@ class _OnboardingState extends State<Onboarding> {
           ),
           Center(
             child: Image.asset(
-              items[_currentIndex]['image'],
+              items[currentIndex]['image'],
               height: 264,
               width: 257,
             ),
           ),
           //dot indecator
-
+          DotsIndicator(
+            dotsCount: items.length,
+            position: currentIndex.toDouble(),
+            decorator: const DotsDecorator(
+              color: Colors.black87, // Inactive color
+              activeColor: Colors.blue,
+            ),
+          ),
           SizedBox(
             height: 30,
           ),
@@ -71,7 +79,7 @@ class _OnboardingState extends State<Onboarding> {
                       height: 30,
                     ),
                     Text(
-                      items[_currentIndex]['title'],
+                      items[currentIndex]['title'],
                       style: TextStyle(
                           fontSize: 25,
                           color: Colors.white,
@@ -80,7 +88,7 @@ class _OnboardingState extends State<Onboarding> {
                     SizedBox(
                       height: 30,
                     ),
-                    Text(items[_currentIndex]['description'],
+                    Text(items[currentIndex]['description'],
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 18,
@@ -91,9 +99,9 @@ class _OnboardingState extends State<Onboarding> {
                     ),
                     CustomButton(
                       onTap: () {
-                        if (_currentIndex < 2) {
+                        if (currentIndex < 2) {
                           setState(() {});
-                          _currentIndex++;
+                          currentIndex++;
                         } else
                           Navigator.pushNamed(context, '/login');
                       },
