@@ -155,7 +155,10 @@ class ForgetPage extends StatelessWidget {
                                           height: 60.h,
                                           width: 200.w,
                                           child: CustomButton(
-                                            onTap: () {},
+                                            onTap: () {
+                                              Navigator.pushNamed(
+                                                  context, '/gotit');
+                                            },
 
                                             buttonText: 'CHECK MAIL',
                                             style: TextStyle(

@@ -165,25 +165,35 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   height: 20.h,
                 ),
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  child: GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/forgetpage'),
-                    child: RichText(
-                        text: TextSpan(children: [
-                      TextSpan(
-                        text: 'Need an Account?',
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Text(
+                        'Need an Account?',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.grey[600]),
                       ),
-                      TextSpan(
-                        text: 'Try Sutraq',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.green),
-                      )
-                    ])),
-                  ),
+                    ),
+                    Container(
+                      alignment: Alignment.bottomCenter,
+                      child: GestureDetector(
+                        onTap: () =>
+                            Navigator.pushNamed(context, '/forgetpage'),
+                        child: RichText(
+                            text: TextSpan(children: [
+                          TextSpan(
+                            text: 'Try Sutraq',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green),
+                          )
+                        ])),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 25,

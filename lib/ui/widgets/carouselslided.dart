@@ -33,7 +33,7 @@ class _Carousel_SliderState extends State<Carousel_Slider> {
       width: 300,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(20)),
-      margin: const EdgeInsets.symmetric(horizontal: 5),
+      margin: const EdgeInsets.symmetric(horizontal: 15),
       child: box(img[currentIndex], title[currentIndex], text[currentIndex]),
     );
   }
@@ -53,7 +53,7 @@ class _Carousel_SliderState extends State<Carousel_Slider> {
               },
               options: CarouselOptions(
                   height: 130,
-                  enlargeCenterPage: true,
+                  enlargeCenterPage: false,
                   aspectRatio: 2.0,
                   onPageChanged: (index, reason) {
                     setState(() {
@@ -91,8 +91,8 @@ Widget box(img, title, text) {
                 children: [
                   Image.asset(
                     img,
-                    height: 20,
-                    width: 20,
+                    height: 20.h,
+                    width: 20.w,
                   ),
                   SizedBox(
                     width: 5,

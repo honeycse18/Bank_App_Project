@@ -8,6 +8,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../widgets/card_box.dart';
+import '../widgets/icon_button.dart';
+import 'bank_history_list.dart';
+
 class DashBoard extends StatefulWidget {
   const DashBoard({super.key});
 
@@ -98,240 +102,258 @@ class _DashBoardState extends State<DashBoard> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.black,
-                                maxRadius: 30,
-                                child: IconButton(
-                                  iconSize: 35.0,
-                                  icon: Icon(Icons.wallet_outlined),
-                                  onPressed: () {
-                                    showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return Dialog(
-                                            child: Container(
-                                              height: 300.h,
-                                              width: 350.w,
-                                              padding: EdgeInsets.only(
-                                                  top: 40,
-                                                  left: 5,
-                                                  right: 5,
-                                                  bottom: 20),
-                                              // margin: EdgeInsets.all(10),
-                                              child: Column(
-                                                children: [
-                                                  Column(
-                                                    children: [
-                                                      Image.asset(
-                                                        'assets/logo/email_Sent.PNG',
-                                                        height: 50.h,
-                                                        width: 70.w,
-                                                      ),
-                                                      SizedBox(
-                                                        height: 20.h,
-                                                      ),
-                                                      Text(
-                                                        "Check Your Inbox!",
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: TextStyle(
-                                                            fontSize: 20.sp,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            color: Colors
-                                                                .grey[900]),
-                                                      ),
-                                                      SizedBox(
-                                                        height: 10.h,
-                                                      ),
-                                                      Text(
-                                                        "An Email has been sent to you. \n Click the link to reset your password.",
-                                                        style: TextStyle(
-                                                            fontSize: 10.sp,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            color: Colors.grey),
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                      ),
-                                                      SizedBox(
-                                                        height: 20.h,
-                                                      ),
-                                                      SizedBox(
-                                                        height: 60.h,
-                                                        width: 200.w,
-                                                        child: CustomButton(
-                                                          onTap: () {},
-
-                                                          buttonText:
-                                                              'CHECK MAIL',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontSize: 5.sp,
-                                                          ),
-                                                          buttonColor: AppColors
-                                                              .deep_green,
-                                                          textColor:
-                                                              Colors.white,
-                                                          // BorderRadius: 10,
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
+                          Icon_Button(
+                            Icon: Image.asset(
+                              'assets/icons/fund.png',
+                            ),
+                            onPressed: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return Dialog(
+                                      child: Container(
+                                        height: 300.h,
+                                        width: 380.w,
+                                        padding: EdgeInsets.only(
+                                            top: 30,
+                                            left: 10,
+                                            right: 10,
+                                            bottom: 10),
+                                        child: Column(
+                                          children: [
+                                            Text(
+                                              'Choose Option',
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: AppColors.deep_grey),
                                             ),
-                                          );
-                                        });
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10.h,
-                              ),
-                              Container(
-                                child: Text("Fund Wallet",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.sp,
-                                        color: Colors.white)),
-                              )
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              CircleAvatar(
-                                  backgroundColor: Colors.black,
-                                  maxRadius: 30,
-                                  child: IconButton(
-                                    iconSize: 35.0,
-                                    icon: Icon(Icons.send_to_mobile_sharp),
-                                    onPressed: () {
-                                      showDialog(
-                                          context: context,
-                                          builder: (context) {
-                                            return Dialog(
-                                              child: Container(
-                                                height: 300.h,
-                                                width: 350.w,
-                                                padding: EdgeInsets.only(
-                                                    top: 40,
-                                                    left: 5,
-                                                    right: 5,
-                                                    bottom: 20),
-                                                // margin: EdgeInsets.all(10),
-                                                child: Column(
+                                            Text(
+                                              'Pick a card to continue',
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: AppColors.light_grey),
+                                            ),
+                                            SizedBox(
+                                              height: 15.h,
+                                            ),
+                                            Row(
+                                              children: [
+                                                //check.png
+                                                Stack(
                                                   children: [
-                                                    Column(
-                                                      children: [
-                                                        Image.asset(
-                                                          'assets/logo/email_Sent.PNG',
-                                                          height: 50.h,
-                                                          width: 70.w,
-                                                        ),
-                                                        SizedBox(
-                                                          height: 20.h,
-                                                        ),
-                                                        Text(
-                                                          "Check Your Inbox!",
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: TextStyle(
-                                                              fontSize: 20.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Colors
-                                                                  .grey[900]),
-                                                        ),
-                                                        SizedBox(
-                                                          height: 10.h,
-                                                        ),
-                                                        Text(
-                                                          "An Email has been sent to you. \n Click the link to reset your password.",
-                                                          style: TextStyle(
-                                                              fontSize: 10.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color:
-                                                                  Colors.grey),
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                        ),
-                                                        SizedBox(
-                                                          height: 20.h,
-                                                        ),
-                                                        SizedBox(
-                                                          height: 60.h,
-                                                          width: 200.w,
-                                                          child: CustomButton(
-                                                            onTap: () {},
-
-                                                            buttonText:
-                                                                'CHECK MAIL',
-                                                            style: TextStyle(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              fontSize: 5.sp,
-                                                            ),
-                                                            buttonColor:
-                                                                AppColors
-                                                                    .deep_green,
-                                                            textColor:
-                                                                Colors.white,
-                                                            // BorderRadius: 10,
-                                                          ),
-                                                        ),
-                                                      ],
+                                                    Container(
+                                                      height: 96.h,
+                                                      width: 89.w,
+                                                      child: CardBox(
+                                                        color:
+                                                            AppColors.deep_blue,
+                                                        text: 'NGN',
+                                                        title: '₦12,000',
+                                                        img:
+                                                            'assets/logo/ngn.png',
+                                                        textcolor: Colors.white,
+                                                      ),
                                                     ),
+                                                    Positioned(
+                                                        top: 0.1,
+                                                        right: 0.5,
+                                                        child: CircleAvatar(
+                                                          backgroundColor:
+                                                              Colors.white,
+                                                          radius: 10,
+                                                          child: Image(
+                                                              image: AssetImage(
+                                                                  'assets/icons/check.png')),
+                                                        ))
                                                   ],
                                                 ),
-                                              ),
-                                            );
-                                          });
-                                    },
-                                  )),
-                              SizedBox(
-                                height: 10.h,
-                              ),
-                              Container(
-                                child: Text("Send Money",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.sp,
-                                        color: Colors.white)),
-                              )
-                            ],
+                                                SizedBox(
+                                                  width: 5.w,
+                                                ),
+                                                Container(
+                                                  height: 96.h,
+                                                  width: 89.w,
+                                                  child: CardBox(
+                                                    color: Colors.white,
+                                                    text: 'GBP',
+                                                    title: '£500',
+                                                    img: 'assets/logo/gbp.PNG',
+                                                    textcolor: Colors.black,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: 5.w,
+                                                ),
+                                                Container(
+                                                  height: 96.h,
+                                                  width: 89.w,
+                                                  child: CardBox(
+                                                    color: Colors.white,
+                                                    text: 'USD',
+                                                    title: '\$500',
+                                                    img: 'assets/logo/usd.png',
+                                                    textcolor: Colors.black,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 20.h,
+                                            ),
+                                            CustomButton(
+                                              onTap: () {},
+                                              buttonText: 'Fund Wallet',
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold),
+                                              buttonColor: AppColors.deep_green,
+                                              textColor: Colors.white,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  });
+                            },
+                            IconSize: 45.0,
+                            avaterColor: Colors.black,
+                            textColor: Colors.white,
+                            title: 'Fund Wallet',
+                            iconColor: Colors.white,
                           ),
-                          Column(
-                            children: [
-                              CircleAvatar(
-                                  backgroundColor: Colors.black,
-                                  maxRadius: 30,
-                                  // minRadius: 15,
-                                  child: IconButton(
-                                    icon: Icon(Icons.send_to_mobile_sharp),
-                                    iconSize: 35.0,
-                                    onPressed: () {
-                                      Navigator.pushNamed(context, '/withdraw');
-                                    },
-                                  )),
-                              SizedBox(
-                                height: 10.h,
-                              ),
-                              Container(
-                                child: Text("Withdraw",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.sp,
-                                        color: Colors.white)),
-                              )
-                            ],
+                          Icon_Button(
+                            Icon: Image.asset(
+                              'assets/icons/send2.png',
+                            ),
+                            onPressed: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return Dialog(
+                                      child: Container(
+                                        height: 300.h,
+                                        width: 380.w,
+                                        padding: EdgeInsets.only(
+                                            top: 30,
+                                            left: 10,
+                                            right: 10,
+                                            bottom: 10),
+                                        child: Column(
+                                          children: [
+                                            Text(
+                                              'Choose Option',
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: AppColors.deep_grey),
+                                            ),
+                                            Text(
+                                              'Pick a card to continue',
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: AppColors.light_grey),
+                                            ),
+                                            SizedBox(
+                                              height: 15.h,
+                                            ),
+                                            Row(
+                                              children: [
+                                                //check.png
+                                                Stack(
+                                                  children: [
+                                                    Container(
+                                                      height: 96.h,
+                                                      width: 89.w,
+                                                      child: CardBox(
+                                                        color:
+                                                            AppColors.deep_blue,
+                                                        text: 'NGN',
+                                                        title: '₦12,000',
+                                                        img:
+                                                            'assets/logo/ngn.png',
+                                                        textcolor: Colors.white,
+                                                      ),
+                                                    ),
+                                                    Positioned(
+                                                        top: 0.1,
+                                                        right: 0.5,
+                                                        child: CircleAvatar(
+                                                          backgroundColor:
+                                                              Colors.white,
+                                                          radius: 10,
+                                                          child: Image(
+                                                              image: AssetImage(
+                                                                  'assets/icons/check.png')),
+                                                        ))
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 5.w,
+                                                ),
+                                                Container(
+                                                  height: 96.h,
+                                                  width: 89.w,
+                                                  child: CardBox(
+                                                    color: Colors.white,
+                                                    text: 'GBP',
+                                                    title: '£500',
+                                                    img: 'assets/logo/gbp.PNG',
+                                                    textcolor: Colors.black,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: 5.w,
+                                                ),
+                                                Container(
+                                                  height: 96.h,
+                                                  width: 89.w,
+                                                  child: CardBox(
+                                                    color: Colors.white,
+                                                    text: 'USD',
+                                                    title: '\$500',
+                                                    img: 'assets/logo/usd.png',
+                                                    textcolor: Colors.black,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 20.h,
+                                            ),
+                                            CustomButton(
+                                              onTap: () {},
+                                              buttonText: 'Send Money',
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold),
+                                              buttonColor: AppColors.deep_green,
+                                              textColor: Colors.white,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  });
+                            },
+                            IconSize: 35.0,
+                            avaterColor: Colors.black,
+                            textColor: Colors.white,
+                            title: 'Send Money',
+                            iconColor: Colors.white,
+                          ),
+                          Icon_Button(
+                            Icon: Image.asset(
+                              'assets/icons/withdraw.png',
+                            ),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/withdraw');
+                            },
+                            IconSize: 35.0,
+                            avaterColor: Colors.black,
+                            textColor: Colors.white,
+                            title: 'Withdraw',
+                            iconColor: Colors.white,
                           ),
                         ],
                       ),
@@ -363,242 +385,69 @@ class _DashBoardState extends State<DashBoard> {
                                         color: Colors.grey[900])),
                                 Divider(
                                     thickness: 1.0, color: Colors.grey[300]),
-                                Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          CircleAvatar(
-                                              maxRadius: 16,
-                                              backgroundColor: Color.fromARGB(
-                                                  255, 179, 236, 255),
-                                              child: Icon(
-                                                  Icons.call_received_rounded,
-                                                  color: Color.fromARGB(
-                                                      255, 9, 197, 16),
-                                                  size: 16)),
-                                          SizedBox(
-                                            width: 10.w,
-                                          ),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text("Access Bank",
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 16.sp,
-                                                      color: Color.fromARGB(
-                                                          255, 12, 1, 59))),
-                                              Text("28, Jan, 2020",
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 12.sp,
-                                                      color: Colors.grey)),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                      Text("\$2400",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 16.sp,
-                                              color: Color.fromARGB(
-                                                  255, 12, 1, 59))),
-                                    ]),
+                                transactionList(
+                                    "Access Bank",
+                                    Icons.call_received_rounded,
+                                    Color.fromARGB(255, 9, 197, 16),
+                                    Color.fromARGB(255, 179, 236, 255),
+                                    "28, Jan, 2020",
+                                    "\$2400"),
                                 Divider(
                                     thickness: 1.0, color: Colors.grey[300]),
-                                Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          CircleAvatar(
-                                              maxRadius: 16,
-                                              backgroundColor: Color.fromARGB(
-                                                  255, 255, 178, 178),
-                                              child: Icon(Icons.call_made,
-                                                  color: Color.fromARGB(
-                                                      255, 234, 24, 9),
-                                                  size: 16)),
-                                          SizedBox(
-                                            width: 10.w,
-                                          ),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text("Alpha Loans",
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 16.sp,
-                                                      color: Color.fromARGB(
-                                                          255, 12, 1, 59))),
-                                              Text("25, Jan, 2020",
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 12.sp,
-                                                      color: Colors.grey)),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                      Text("\$10,000",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 16.sp,
-                                              color: Color.fromARGB(
-                                                  255, 12, 1, 59))),
-                                    ]),
+                                transactionList(
+                                    "Alpha Loans",
+                                    Icons.call_made,
+                                    Color.fromARGB(255, 234, 24, 9),
+                                    Color.fromARGB(255, 255, 178, 178),
+                                    "25, Jan, 2020",
+                                    "\$10,000"),
                                 Divider(
                                     thickness: 1.0, color: Colors.grey[300]),
-                                Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(children: [
-                                        CircleAvatar(
-                                            maxRadius: 16,
-                                            backgroundColor: Color.fromARGB(
-                                                255, 179, 236, 255),
-                                            child: Icon(
-                                                Icons.call_received_rounded,
-                                                color: Color.fromARGB(
-                                                    255, 9, 197, 16),
-                                                size: 16)),
-                                        SizedBox(
-                                          width: 10.w,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text("Access Bank",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 16.sp,
-                                                    color: Color.fromARGB(
-                                                        255, 12, 1, 59))),
-                                            Text("23, Jan, 2020",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 12.sp,
-                                                    color: Colors.grey)),
-                                          ],
-                                        ),
-                                      ]),
-                                      Text("\$4500,000",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 16.sp,
-                                              color: Color.fromARGB(
-                                                  255, 12, 1, 59))),
-                                    ]),
+                                transactionList(
+                                    "Access Bank",
+                                    Icons.call_received_rounded,
+                                    Color.fromARGB(255, 9, 197, 16),
+                                    Color.fromARGB(255, 179, 236, 255),
+                                    "23, Jan, 2020",
+                                    "\$4500,000"),
                                 Divider(
                                     thickness: 1.0, color: Colors.grey[300]),
-                                Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(children: [
-                                        CircleAvatar(
-                                            maxRadius: 16,
-                                            backgroundColor: Color.fromARGB(
-                                                255, 255, 178, 178),
-                                            child: Icon(Icons.call_made,
-                                                color: Color.fromARGB(
-                                                    255, 234, 24, 9),
-                                                size: 16)),
-                                        SizedBox(
-                                          width: 10.w,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text("Alpha Loans",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 16.sp,
-                                                    color: Color.fromARGB(
-                                                        255, 12, 1, 59))),
-                                            Text("21, Jan, 2020",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 12.sp,
-                                                    color: Colors.grey)),
-                                          ],
-                                        ),
-                                      ]),
-                                      Text("\$2000",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 16.sp,
-                                              color: Color.fromARGB(
-                                                  255, 12, 1, 59))),
-                                    ]),
+                                transactionList(
+                                    "Alpha Loans",
+                                    Icons.call_made,
+                                    Color.fromARGB(255, 234, 24, 9),
+                                    Color.fromARGB(255, 255, 178, 178),
+                                    "21, Jan, 2020",
+                                    "\$2,000"),
                                 Divider(
                                     thickness: 1.0, color: Colors.grey[300]),
-                                Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(children: [
-                                        CircleAvatar(
-                                            maxRadius: 16,
-                                            backgroundColor: Color.fromARGB(
-                                                255, 179, 236, 255),
-                                            child: Icon(
-                                                Icons.call_received_rounded,
-                                                color: Color.fromARGB(
-                                                    255, 9, 197, 16),
-                                                size: 16)),
-                                        SizedBox(
-                                          width: 10.w,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text("Access Bank",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 16.sp,
-                                                    color: Color.fromARGB(
-                                                        255, 12, 1, 59))),
-                                            Text("20, Jan, 2020",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 12.sp,
-                                                    color: Colors.grey)),
-                                          ],
-                                        ),
-                                      ]),
-                                      Text("\$40,000",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 16.sp,
-                                              color: Color.fromARGB(
-                                                  255, 12, 1, 59))),
-                                    ]),
+                                transactionList(
+                                    "Access Bank",
+                                    Icons.call_received_rounded,
+                                    Color.fromARGB(255, 9, 197, 16),
+                                    Color.fromARGB(255, 179, 236, 255),
+                                    "18, Jan, 2020",
+                                    "\$40,000"),
                                 Divider(
                                   thickness: 1.0,
                                   color: Colors.grey[300],
                                 ),
                                 Container(
                                   alignment: Alignment.bottomCenter,
-                                  child: Text("View All",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16.sp,
-                                          color: Colors.green)),
-                                )
+                                  child: GestureDetector(
+                                    onTap: () => Navigator.pushNamed(
+                                        context, '/transaction'),
+                                    child: RichText(
+                                      text: TextSpan(
+                                        text: "View All",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16.sp,
+                                            color: Colors.green),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
                           ),

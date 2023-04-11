@@ -3,9 +3,13 @@ import 'package:bank_app_project/home_page.dart';
 import 'package:bank_app_project/ui/bottom_nav_bar/Pages/wallet.dart';
 import 'package:bank_app_project/ui/bottom_nav_bar/Pages/withdraw.dart';
 import 'package:bank_app_project/ui/bottom_nav_bar/bottom_nav_bar.dart';
+import 'package:bank_app_project/ui/route/add_card.dart';
 import 'package:bank_app_project/ui/route/dashboard.dart';
 import 'package:bank_app_project/ui/route/forgetpage.dart';
+import 'package:bank_app_project/ui/route/fund_wallet.dart';
+import 'package:bank_app_project/ui/route/gotit.dart';
 import 'package:bank_app_project/ui/route/login.dart';
+import 'package:bank_app_project/ui/route/transactions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -37,6 +41,10 @@ class MyApp extends StatelessWidget {
             '/bottomNavBar': (_) => BottomNavController(),
             '/wallet': (_) => Wallet(),
             '/withdraw': (_) => Withdraw(),
+            '/addnewcard': (_) => AddCard(),
+            '/fundwallet': (_) => FundWallet(),
+            '/gotit': (_) => GotIt(),
+            '/transaction': (_) => Transactions(),
           },
           initialRoute: '/splash',
         );
@@ -44,6 +52,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 //error ta kon screen e dekhasse..login koren
 class Splash extends StatefulWidget {
   const Splash({super.key});
