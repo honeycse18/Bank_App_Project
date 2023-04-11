@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'bank_history_list.dart';
+import '../widgets/bank_history_list.dart';
 
 class Transactions extends StatefulWidget {
   Transactions({super.key});

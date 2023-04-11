@@ -8,9 +8,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../widgets/bank_history_list.dart';
 import '../widgets/card_box.dart';
 import '../widgets/icon_button.dart';
-import 'bank_history_list.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({super.key});

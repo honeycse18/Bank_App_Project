@@ -1,5 +1,6 @@
 import 'package:bank_app_project/const/app_colors.dart';
 import 'package:bank_app_project/ui/widgets/button.dart';
+import 'package:bank_app_project/ui/widgets/visa_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -68,96 +69,7 @@ class AddCard extends StatelessWidget {
             SizedBox(
               height: 50.h,
             ),
-            Container(
-              height: 200.h,
-              width: 300.w,
-              child: Card(
-                  elevation: 5,
-                  color: AppColors.deep_blue,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      top: 20,
-                      right: 20,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      // mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "VISA",
-                          style: TextStyle(
-                              fontSize: 22.sp,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 20.h,
-                        ),
-                        Text(
-                          "CARD NUMBER",
-                          style: TextStyle(
-                              fontSize: 10.sp,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "*** *** *** *379",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 20.h,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "CARD HOLDER NAME",
-                              style: TextStyle(
-                                  fontSize: 10.sp,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Expire Date",
-                              style: TextStyle(
-                                  fontSize: 10.sp,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5.h,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Precious Ogar",
-                              style: TextStyle(
-                                  fontSize: 18.sp,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "02/25",
-                              style: TextStyle(
-                                  fontSize: 10.sp,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )),
-            ),
+            VisaCard(AppColors.deep_blue),
             SizedBox(
               height: 30.h,
             ),
