@@ -4,12 +4,15 @@ import 'package:bank_app_project/ui/bottom_nav_bar/Pages/wallet.dart';
 import 'package:bank_app_project/ui/bottom_nav_bar/Pages/withdraw.dart';
 import 'package:bank_app_project/ui/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:bank_app_project/ui/route/add_card.dart';
+import 'package:bank_app_project/ui/route/add_new_bank.dart';
 import 'package:bank_app_project/ui/route/dashboard.dart';
 import 'package:bank_app_project/ui/route/forgetpage.dart';
+import 'package:bank_app_project/ui/route/fund_wallet.2.dart';
 import 'package:bank_app_project/ui/route/fund_wallet.dart';
 import 'package:bank_app_project/ui/route/gotit.dart';
 import 'package:bank_app_project/ui/route/login.dart';
 import 'package:bank_app_project/ui/route/transactions.dart';
+import 'package:bank_app_project/ui/route/withdraw_funds.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,7 +46,10 @@ class MyApp extends StatelessWidget {
             '/withdraw': (_) => Withdraw(),
             '/addnewcard': (_) => AddCard(),
             '/fundwallet': (_) => FundWallet(),
+            '/fundwallet2': (_) => FundWallet2(),
             '/gotit': (_) => GotIt(),
+            '/addnewbank': (_) => AddNewBankAccount(),
+            '/withdrawfunds': (_) => WithdrawFunds(),
             '/transaction': (_) => Transactions(),
           },
           initialRoute: '/splash',

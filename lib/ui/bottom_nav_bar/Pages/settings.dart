@@ -20,49 +20,52 @@ class Settings extends StatelessWidget {
             Text(
               'Account Settings',
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
             SizedBox(height: 30.h),
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 30,
-                  child: Text(
-                    "OP",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 30,
+                    child: Text(
+                      "OP",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                    backgroundColor: Colors.deepPurple,
                   ),
-                  backgroundColor: Colors.deepPurple,
-                ),
-                SizedBox(width: 10.w),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Hello, Precious!",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20.sp),
-                    ),
-                    Text(
-                      'Su/Pre123',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 177, 169, 169),
+                  SizedBox(width: 10.w),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Hello, Precious!",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20.sp),
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(width: 130.w),
-                Icon(
-                  Icons.arrow_forward,
-                  color: Colors.white,
-                ),
-              ],
+                      Text(
+                        'Su/Pre123',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 177, 169, 169),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 80.w),
+                  Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
             ),
             SizedBox(height: 20.h),
             Expanded(

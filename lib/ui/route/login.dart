@@ -37,7 +37,7 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 10.h,
                 ),
                 Text(
                   "Enter Your Details To Continue",
@@ -50,7 +50,7 @@ class LoginPage extends StatelessWidget {
                   height: 30.h,
                 ),
                 Container(
-                  height: 300.h,
+                  height: 350.h,
                   width: 300.w,
                   child: Column(
                     children: [
@@ -196,7 +196,7 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 25.h,
                 ),
                 Image.asset(
                   "assets/icons/fingerprint.png",

@@ -86,7 +86,7 @@ class _DashBoardState extends State<DashBoard> {
             // SizedBox(height: 30.h),
             Expanded(
               child: Container(
-                width: double.maxFinite,
+                width: 450.w,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(20),
@@ -116,15 +116,15 @@ class _DashBoardState extends State<DashBoard> {
                                         width: 380.w,
                                         padding: EdgeInsets.only(
                                             top: 30,
-                                            left: 10,
-                                            right: 10,
+                                            left: 5,
+                                            right: 5,
                                             bottom: 10),
                                         child: Column(
                                           children: [
                                             Text(
                                               'Choose Option',
                                               style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 20.sp,
                                                   fontWeight: FontWeight.bold,
                                                   color: AppColors.deep_grey),
                                             ),
@@ -205,7 +205,7 @@ class _DashBoardState extends State<DashBoard> {
                                               onTap: () {},
                                               buttonText: 'Fund Wallet',
                                               style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 20.sp,
                                                   fontWeight: FontWeight.bold),
                                               buttonColor: AppColors.deep_green,
                                               textColor: Colors.white,
@@ -236,22 +236,22 @@ class _DashBoardState extends State<DashBoard> {
                                         width: 380.w,
                                         padding: EdgeInsets.only(
                                             top: 30,
-                                            left: 10,
-                                            right: 10,
+                                            left: 5,
+                                            right: 5,
                                             bottom: 10),
                                         child: Column(
                                           children: [
                                             Text(
                                               'Choose Option',
                                               style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 20.sp,
                                                   fontWeight: FontWeight.bold,
                                                   color: AppColors.deep_grey),
                                             ),
                                             Text(
                                               'Pick a card to continue',
                                               style: TextStyle(
-                                                  fontSize: 16,
+                                                  fontSize: 16.sp,
                                                   color: AppColors.light_grey),
                                             ),
                                             SizedBox(
@@ -325,7 +325,7 @@ class _DashBoardState extends State<DashBoard> {
                                               onTap: () {},
                                               buttonText: 'Send Money',
                                               style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 20.sp,
                                                   fontWeight: FontWeight.bold),
                                               buttonColor: AppColors.deep_green,
                                               textColor: Colors.white,
@@ -372,7 +372,7 @@ class _DashBoardState extends State<DashBoard> {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.only(
-                              top: 30, left: 40, right: 40),
+                              top: 15, left: 40, right: 40),
                           child: SingleChildScrollView(
                             scrollDirection: Axis.vertical,
                             child: Column(

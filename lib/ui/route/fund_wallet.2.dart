@@ -3,12 +3,12 @@ import 'package:bank_app_project/ui/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FundWallet extends StatefulWidget {
+class FundWallet2 extends StatefulWidget {
   @override
-  State<FundWallet> createState() => _FundWalletState();
+  State<FundWallet2> createState() => _FundWallet2State();
 }
 
-class _FundWalletState extends State<FundWallet> {
+class _FundWallet2State extends State<FundWallet2> {
   final _emailController = TextEditingController();
 
   var valueChoose = "-1";
@@ -150,7 +150,11 @@ class _FundWalletState extends State<FundWallet> {
                                     value: valueChoose,
                                     items: [
                                       DropdownMenuItem(
-                                        child: Text("Bank Account"),
+                                        child: Text(
+                                          "Debit/Credit Card",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                         value: "-1",
                                       ),
                                       DropdownMenuItem(
@@ -218,7 +222,31 @@ class _FundWalletState extends State<FundWallet> {
                                     value: valueChoose,
                                     items: [
                                       DropdownMenuItem(
-                                        child: Text("938103802(Access Bank)"),
+                                        child: Row(
+                                          children: [
+                                            Card(
+                                              color: Color.fromARGB(
+                                                  255, 2, 64, 114),
+                                              child: Text(
+                                                "VISA",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 16.sp,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 10.w,
+                                            ),
+                                            Text("*** *** *** 2739",
+                                                style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontSize: 18.sp,
+                                                    fontWeight:
+                                                        FontWeight.bold)),
+                                          ],
+                                        ),
                                         value: "-1",
                                       ),
                                       DropdownMenuItem(
@@ -242,7 +270,7 @@ class _FundWalletState extends State<FundWallet> {
                             ),
                             CustomButton(
                               onTap: () {
-                                Navigator.pushNamed(context, '/fundwallet2');
+                                Navigator.pushNamed(context, '/addnewbank');
                               },
 
                               buttonText: 'PROCEED',

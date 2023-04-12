@@ -56,25 +56,25 @@ class AddCard extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 60.h,
+              height: 30.h,
             ),
             Text(
               "Ensure to fill in the neccessary details of the recipient in order to continue",
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   color: Colors.grey[600],
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 50.h,
+              height: 30.h,
             ),
             VisaCard(AppColors.deep_blue),
             SizedBox(
-              height: 30.h,
+              height: 20.h,
             ),
             Container(
-              height: 300.h,
+              height: 320.h,
               width: 300.w,
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.center,
@@ -98,7 +98,7 @@ class AddCard extends StatelessWidget {
                       decoration: InputDecoration(
                         hintText: 'Your Card Number',
                         hintStyle: TextStyle(
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.bold,
                             color: AppColors.deep_grey),
                         fillColor: Colors.transparent,
@@ -123,7 +123,7 @@ class AddCard extends StatelessWidget {
                               child: Text(
                                 "Expiry Date",
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 15.sp,
                                   color: Colors.grey[600],
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -135,7 +135,7 @@ class AddCard extends StatelessWidget {
                               decoration: InputDecoration(
                                 hintText: 'MM/YY',
                                 hintStyle: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 20.sp,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.deep_grey),
                                 fillColor: Colors.transparent,
@@ -160,7 +160,7 @@ class AddCard extends StatelessWidget {
                               child: Text(
                                 "CVV",
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 15.sp,
                                   color: Colors.grey[600],
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -172,7 +172,7 @@ class AddCard extends StatelessWidget {
                               decoration: InputDecoration(
                                 hintText: 'CVV',
                                 hintStyle: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 20.sp,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.deep_grey),
                                 fillColor: Colors.transparent,

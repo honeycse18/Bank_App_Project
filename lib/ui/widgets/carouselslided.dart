@@ -52,7 +52,7 @@ class _Carousel_SliderState extends State<Carousel_Slider> {
                 return buildView();
               },
               options: CarouselOptions(
-                  height: 130,
+                  height: 140.h,
                   enlargeCenterPage: false,
                   aspectRatio: 2.0,
                   onPageChanged: (index, reason) {
@@ -95,12 +95,12 @@ Widget box(img, title, text) {
                     width: 20.w,
                   ),
                   SizedBox(
-                    width: 5,
+                    width: 5.w,
                   ),
                   Text(
                     title,
                     style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 15.sp,
                         fontWeight: FontWeight.w600,
                         color: Colors.black),
                   ),
@@ -121,7 +121,7 @@ Widget box(img, title, text) {
         Text(
           'Available Balance',
           style: TextStyle(
-              fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey),
+              fontSize: 12.sp, fontWeight: FontWeight.w600, color: Colors.grey),
         ),
         SizedBox(
           height: 15.h,
@@ -132,7 +132,7 @@ Widget box(img, title, text) {
             Text(
               text,
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.w600,
                   color: Colors.green),
             ),

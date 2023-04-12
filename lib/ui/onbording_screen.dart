@@ -1,6 +1,7 @@
 import 'package:bank_app_project/ui/widgets/button.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../const/app_colors.dart';
 
@@ -59,7 +60,7 @@ class _OnboardingState extends State<Onboarding> {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 30.h,
           ),
           Expanded(
             child: Container(
@@ -71,31 +72,31 @@ class _OnboardingState extends State<Onboarding> {
                 color: AppColors.deep_green,
               ),
               child: Padding(
-                padding: const EdgeInsets.only(top: 50, left: 35, right: 35),
+                padding: const EdgeInsets.only(top: 40, left: 35, right: 35),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: 30,
+                      height: 30.h,
                     ),
                     Text(
                       items[currentIndex]['title'],
                       style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 25.sp,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 30.h,
                     ),
                     Text(items[currentIndex]['description'],
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 18.sp,
                             color: Colors.white,
                             fontWeight: FontWeight.bold)),
                     SizedBox(
-                      height: 30,
+                      height: 30.h,
                     ),
                     CustomButton(
                       onTap: () {
@@ -113,14 +114,14 @@ class _OnboardingState extends State<Onboarding> {
                       // BorderRadius: 10,
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 30.h,
                     ),
                     Text(
                       'Try Sutraq',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          fontSize: 20),
+                          fontSize: 20.sp),
                     )
                   ],
                 ),

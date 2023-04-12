@@ -44,7 +44,7 @@ class _Carousel_Slider_twoState extends State<Carousel_Slider_two> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white10,
+      backgroundColor: Color.fromARGB(26, 156, 170, 182),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

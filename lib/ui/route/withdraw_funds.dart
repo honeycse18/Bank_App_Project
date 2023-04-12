@@ -3,12 +3,12 @@ import 'package:bank_app_project/ui/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FundWallet extends StatefulWidget {
+class WithdrawFunds extends StatefulWidget {
   @override
-  State<FundWallet> createState() => _FundWalletState();
+  State<WithdrawFunds> createState() => _WithdrawFundsState();
 }
 
-class _FundWalletState extends State<FundWallet> {
+class _WithdrawFundsState extends State<WithdrawFunds> {
   final _emailController = TextEditingController();
 
   var valueChoose = "-1";
@@ -49,10 +49,10 @@ class _FundWalletState extends State<FundWallet> {
                       ),
                     ),
                     SizedBox(
-                      width: 80.w,
+                      width: 50.w,
                     ),
                     Text(
-                      "Fund Wallet",
+                      "Withdraw Funds",
                       style: TextStyle(
                         fontSize: 25.sp,
                         fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class _FundWalletState extends State<FundWallet> {
                   height: 25.h,
                 ),
                 Text(
-                  "Ensure to fill in the neccessary details of the recipient in order to continue",
+                  "Ensure to fill in the neccessary\n details of the recipient in order to\n continue",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 16.sp,
@@ -74,7 +74,7 @@ class _FundWalletState extends State<FundWallet> {
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
-                  height: 80.h,
+                  height: 100.h,
                 ),
                 Stack(
                   clipBehavior: Clip.none,
@@ -86,7 +86,7 @@ class _FundWalletState extends State<FundWallet> {
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.white),
                       child: Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(20.0),
                         child: Column(
                           //mainAxisAlignment: MainAxisAlignment.center,
                           // crossAxisAlignment: CrossAxisAlignment.center,
@@ -111,12 +111,11 @@ class _FundWalletState extends State<FundWallet> {
                                 controller: _emailController,
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 decoration: InputDecoration(
-                                  hintText: 'Enter Amount',
+                                  hintText: '₦ Enter Amount',
                                   hintStyle: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
                                       color: AppColors.deep_grey),
-                                  prefixIcon: Icon(Icons.account_balance),
                                   fillColor: Colors.transparent,
                                   filled: true,
                                   border: OutlineInputBorder(
@@ -126,51 +125,7 @@ class _FundWalletState extends State<FundWallet> {
                               ),
                             ),
                             SizedBox(
-                              height: 20.h,
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  alignment: Alignment.topLeft,
-                                  child: Text(
-                                    "Payment Option",
-                                    style: TextStyle(
-                                      fontSize: 15.sp,
-                                      color: Colors.grey[600],
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                DropdownButtonFormField(
-                                    decoration: InputDecoration(
-                                        hoverColor: Colors.blue,
-                                        border: OutlineInputBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0.0))),
-                                    value: valueChoose,
-                                    items: [
-                                      DropdownMenuItem(
-                                        child: Text("Bank Account"),
-                                        value: "-1",
-                                      ),
-                                      DropdownMenuItem(
-                                        child: Text("Euro"),
-                                        value: "1",
-                                      ),
-                                      DropdownMenuItem(
-                                        child: Text("Dollar"),
-                                        value: "2",
-                                      ),
-                                      DropdownMenuItem(
-                                        child: Text("Neigerian Naira"),
-                                        value: "3",
-                                      ),
-                                    ],
-                                    onChanged: (v) {})
-                              ],
-                            ),
-                            SizedBox(
-                              height: 15.h,
+                              height: 30.h,
                             ),
                             Column(
                               children: [
@@ -213,12 +168,21 @@ class _FundWalletState extends State<FundWallet> {
                                     decoration: InputDecoration(
                                         hoverColor: Colors.blue,
                                         border: OutlineInputBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0.0))),
+                                          borderRadius:
+                                              BorderRadius.circular(0.0),
+                                        ),
+                                        prefixIcon: Icon(
+                                            Icons.account_balance_outlined),
+                                        iconColor: AppColors.deep_grey),
                                     value: valueChoose,
                                     items: [
                                       DropdownMenuItem(
-                                        child: Text("938103802(Access Bank)"),
+                                        child: Text("938103802(Access Bank)",
+                                            style: TextStyle(
+                                              fontSize: 15.sp,
+                                              color: AppColors.deep_grey,
+                                              fontWeight: FontWeight.bold,
+                                            )),
                                         value: "-1",
                                       ),
                                       DropdownMenuItem(
@@ -238,11 +202,11 @@ class _FundWalletState extends State<FundWallet> {
                               ],
                             ),
                             SizedBox(
-                              height: 20.h,
+                              height: 40.h,
                             ),
                             CustomButton(
                               onTap: () {
-                                Navigator.pushNamed(context, '/fundwallet2');
+                                //s   Navigator.pushNamed(context, '/');
                               },
 
                               buttonText: 'PROCEED',
@@ -256,9 +220,9 @@ class _FundWalletState extends State<FundWallet> {
                       ),
                     ),
                     Positioned(
-                      top: -75,
-                      right: 20,
-                      left: 20,
+                      top: -65,
+                      right: 50,
+                      left: 50,
                       child: Container(
                         height: 130.h,
                         width: 200.w,

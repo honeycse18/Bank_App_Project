@@ -91,7 +91,7 @@ class _TransactionsState extends State<Transactions> {
                       Text(
                         "Transaction History",
                         style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 25.sp,
                             fontWeight: FontWeight.bold,
                             color: Colors.black),
                       ),
@@ -99,7 +99,7 @@ class _TransactionsState extends State<Transactions> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 30, left: 50, right: 50),
+                  padding: const EdgeInsets.only(top: 20, left: 50, right: 50),
                   child: DropdownButtonFormField(
                       decoration: InputDecoration(
                           hoverColor: AppColors.deep_green,

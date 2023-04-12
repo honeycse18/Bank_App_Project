@@ -6,7 +6,7 @@ import '../../const/app_colors.dart';
 
 Widget VisaCard(Color color) {
   return Container(
-    height: 250.h,
+    height: 200.h,
     width: 450.w,
     child: Card(
         elevation: 5,
