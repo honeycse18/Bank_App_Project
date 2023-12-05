@@ -25,7 +25,7 @@ class _Visa_Card_SliderState extends State<Visa_Card_Slider> {
       height: 350.h,
       decoration: BoxDecoration(
           color: Colors.transparent, borderRadius: BorderRadius.circular(20)),
-      margin: const EdgeInsets.symmetric(horizontal: 15),
+      margin: const EdgeInsets.symmetric(horizontal: 5),
       child: Visa_Cards[currentIndex],
     );
   }

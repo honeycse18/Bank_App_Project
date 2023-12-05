@@ -49,7 +49,7 @@ class AddCard extends StatelessWidget {
                 Text(
                   "Add New Bank Card",
                   style: TextStyle(
-                      fontSize: 25.sp,
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 )
@@ -188,7 +188,7 @@ class AddCard extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 30.h,
+                    height: 20.h,
                   ),
                   CustomButton(
                     onTap: () {

@@ -6,7 +6,7 @@ import '../../const/app_colors.dart';
 
 Widget VisaCard(Color color) {
   return Container(
-    height: 200.h,
+    height: 210.h,
     width: 450.w,
     child: Card(
         elevation: 5,
@@ -14,9 +14,10 @@ Widget VisaCard(Color color) {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         child: Padding(
           padding: const EdgeInsets.only(
-            left: 20,
+            left: 20.0,
             top: 15,
             right: 20,
+            bottom: 15,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,7 +31,7 @@ Widget VisaCard(Color color) {
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
-                height: 20.h,
+                height: 10.h,
               ),
               Text(
                 "CARD NUMBER",
@@ -47,7 +48,7 @@ Widget VisaCard(Color color) {
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
-                height: 20.h,
+                height: 10.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -24,7 +24,9 @@ class GotIt extends StatelessWidget {
               height: 300.h,
             ),
             CustomButton(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/bottomNavBar');
+                },
                 buttonText: "Got It!",
                 textColor: Colors.white,
                 style: TextStyle(fontWeight: FontWeight.bold)),

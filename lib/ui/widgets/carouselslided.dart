@@ -32,8 +32,8 @@ class _Carousel_SliderState extends State<Carousel_Slider> {
     return Container(
       width: 300,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(20)),
-      margin: const EdgeInsets.symmetric(horizontal: 15),
+          color: Colors.white, borderRadius: BorderRadius.circular(15)),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
       child: box(img[currentIndex], title[currentIndex], text[currentIndex]),
     );
   }
@@ -77,7 +77,11 @@ class _Carousel_SliderState extends State<Carousel_Slider> {
 
 Widget box(img, title, text) {
   return Padding(
-    padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
+    padding: const EdgeInsets.only(
+      left: 5,
+      right: 5,
+      top: 10,
+    ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       // mainAxisAlignment: MainAxisAlignment.spaceBetween,

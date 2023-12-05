@@ -27,9 +27,8 @@ class Cards extends StatelessWidget {
             ),
             SizedBox(height: 30.h),
             Padding(
-              padding: EdgeInsets.only(left: 20, right: 20, top: 20),
+              padding: EdgeInsets.only(left: 20, right: 20),
               child: Column(children: [
-                // SizedBox(height: 30.h),
                 Container(
                   height: 250.h,
                   child: Visa_Card_Slider(),

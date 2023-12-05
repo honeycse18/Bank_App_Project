@@ -112,7 +112,7 @@ class _DashBoardState extends State<DashBoard> {
                                   builder: (context) {
                                     return Dialog(
                                       child: Container(
-                                        height: 300.h,
+                                        height: 320.h,
                                         width: 380.w,
                                         padding: EdgeInsets.only(
                                             top: 30,
@@ -232,7 +232,7 @@ class _DashBoardState extends State<DashBoard> {
                                   builder: (context) {
                                     return Dialog(
                                       child: Container(
-                                        height: 300.h,
+                                        height: 320.h,
                                         width: 380.w,
                                         padding: EdgeInsets.only(
                                             top: 30,

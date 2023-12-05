@@ -91,7 +91,7 @@ class _TransactionsState extends State<Transactions> {
                       Text(
                         "Transaction History",
                         style: TextStyle(
-                            fontSize: 25.sp,
+                            fontSize: 22.sp,
                             fontWeight: FontWeight.bold,
                             color: Colors.black),
                       ),
@@ -111,7 +111,7 @@ class _TransactionsState extends State<Transactions> {
                           child: Text(
                             "Naira Account: ₦190,000",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18.sp),
+                                fontWeight: FontWeight.bold, fontSize: 16.sp),
                           ),
                           value: "-1",
                         ),
@@ -176,7 +176,7 @@ class _TransactionsState extends State<Transactions> {
                                 child: AnimatedContainer(
                                   duration: const Duration(milliseconds: 300),
                                   //margin: const EdgeInsets.all(5),
-                                  width: 125.w,
+                                  width: 115.w,
                                   height: 45.h,
                                   child: Center(
                                     child: Text(
@@ -185,7 +185,8 @@ class _TransactionsState extends State<Transactions> {
                                           fontWeight: FontWeight.bold,
                                           color: current == index
                                               ? Colors.blue
-                                              : Colors.grey),
+                                              : Colors.grey,
+                                          fontSize: 10.sp),
                                     ),
                                   ),
                                 ),
@@ -193,7 +194,7 @@ class _TransactionsState extends State<Transactions> {
                               Visibility(
                                   visible: current == index,
                                   child: Container(
-                                    width: 120.w,
+                                    width: 130.w,
                                     height: 2.h,
                                     decoration: const BoxDecoration(
                                         color: Colors.blue,

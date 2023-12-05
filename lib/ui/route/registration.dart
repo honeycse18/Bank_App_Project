@@ -3,11 +3,12 @@ import 'package:bank_app_project/ui/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class RegistrationPage extends StatelessWidget {
+  const RegistrationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController _nameController = TextEditingController();
     TextEditingController _emailController = TextEditingController();
     TextEditingController _passController = TextEditingController();
 
@@ -33,7 +34,7 @@ class LoginPage extends StatelessWidget {
                   height: 40.h,
                 ),
                 Text(
-                  "Welcome Back!",
+                  "Create An Account",
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -50,10 +51,39 @@ class LoginPage extends StatelessWidget {
                   height: 30.h,
                 ),
                 Container(
-                  height: 350.h,
+                  height: 450.h,
                   width: 300.w,
                   child: Column(
                     children: [
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Full Name",
+                          style: TextStyle(
+                            fontSize: 15.sp,
+                            color: Colors.grey[600],
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: TextField(
+                          controller: _nameController,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.person_2_outlined),
+                            prefixIconColor: Colors.green,
+                            fillColor: Colors.transparent,
+                            filled: true,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(0),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10.h,
+                      ),
                       Container(
                         alignment: Alignment.centerLeft,
                         child: Text(
@@ -117,39 +147,17 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10.h,
-                      ),
-                      Container(
-                        alignment: Alignment.centerRight,
-                        child: GestureDetector(
-                          onTap: () =>
-                              Navigator.pushNamed(context, '/forgetpage'),
-                          child: RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: 'Forget Password?',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.green),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10.h,
+                        height: 20.h,
                       ),
                       SizedBox(
                         height: 50.h,
                         width: 300.w,
                         child: CustomButton(
                           onTap: () {
-                            Navigator.pushNamed(context, '/bottomNavBar');
+                            Navigator.pushNamed(context, '/login');
                           },
 
-                          buttonText: 'LOGIN',
+                          buttonText: 'Submit',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15.sp,
@@ -168,21 +176,20 @@ class LoginPage extends StatelessWidget {
                   children: [
                     Container(
                       child: Text(
-                        'Need an Account?',
+                        'Already Have An Account?',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.grey[600]),
                       ),
                     ),
                     Container(
-                      alignment: Alignment.bottomCenter,
+                      //alignment: Alignment.bottomCenter,
                       child: GestureDetector(
-                        onTap: () =>
-                            Navigator.pushNamed(context, '/registration'),
+                        onTap: () => Navigator.pushNamed(context, '/login'),
                         child: RichText(
                             text: TextSpan(children: [
                           TextSpan(
-                            text: 'Try Sutraq',
+                            text: 'Login',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.green),
@@ -192,21 +199,6 @@ class LoginPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 25.h,
-                ),
-                Image.asset(
-                  "assets/icons/fingerprint.png",
-                  height: 50.h,
-                  width: 50.w,
-                ),
-                SizedBox(
-                  height: 20.h,
-                ),
-                Text(
-                  "Tap to use fingerprint",
-                  style: TextStyle(color: Colors.green),
-                ),
               ],
             ),
           ),
@@ -215,5 +207,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
-//Color.fromARGB(255, 13, 174, 21)

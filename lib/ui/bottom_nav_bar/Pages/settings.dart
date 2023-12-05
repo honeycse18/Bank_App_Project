@@ -20,17 +20,17 @@ class Settings extends StatelessWidget {
             Text(
               'Account Settings',
               style: TextStyle(
-                  fontSize: 25.sp,
+                  fontSize: 22.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
             SizedBox(height: 30.h),
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.only(left: 20, right: 10),
               child: Row(
                 children: [
                   CircleAvatar(
-                    radius: 30,
+                    radius: 25,
                     child: Text(
                       "OP",
                       style: TextStyle(
@@ -47,7 +47,7 @@ class Settings extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
-                            fontSize: 20.sp),
+                            fontSize: 18.sp),
                       ),
                       Text(
                         'Su/Pre123',
@@ -59,10 +59,18 @@ class Settings extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 80.w),
-                  Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
+                  SizedBox(width: 65.w),
+                  Container(
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/bottomNavBar');
+                      },
+                      icon: Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                      ),
+                      iconSize: 30.0,
+                    ),
                   ),
                 ],
               ),
@@ -78,7 +86,7 @@ class Settings extends StatelessWidget {
                   color: Colors.white,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 25, left: 40, right: 40),
+                  padding: const EdgeInsets.only(top: 20, left: 40, right: 40),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Column(

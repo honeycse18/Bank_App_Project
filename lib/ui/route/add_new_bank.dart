@@ -74,7 +74,7 @@ class _AddNewBankAccountState extends State<AddNewBankAccount> {
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
-                  height: 80.h,
+                  height: 50.h,
                 ),
 
                 //Middle Container
@@ -86,7 +86,8 @@ class _AddNewBankAccountState extends State<AddNewBankAccount> {
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.white),
                   child: Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding:
+                        EdgeInsets.only(left: 20.0, right: 20.0, top: 50.0),
                     child: Column(
                       //mainAxisAlignment: MainAxisAlignment.center,
                       // crossAxisAlignment: CrossAxisAlignment.center,
@@ -116,9 +117,8 @@ class _AddNewBankAccountState extends State<AddNewBankAccount> {
                                     child: Text(
                                       "Select Bank",
                                       style: TextStyle(
-                                        fontSize: 18.sp,
+                                        fontSize: 16.sp,
                                         color: AppColors.deep_grey,
-                                        fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                     value: "-1",
@@ -140,7 +140,7 @@ class _AddNewBankAccountState extends State<AddNewBankAccount> {
                           ],
                         ),
                         SizedBox(
-                          height: 30.h,
+                          height: 20.h,
                         ),
                         Container(
                           alignment: Alignment.topLeft,
@@ -160,8 +160,8 @@ class _AddNewBankAccountState extends State<AddNewBankAccount> {
                             decoration: InputDecoration(
                               hintText: 'Your Account Number',
                               hintStyle: TextStyle(
-                                  fontSize: 18.sp,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16.sp,
+                                  // fontWeight: FontWeight.bold,
                                   color: AppColors.deep_grey),
                               filled: true,
                               border: OutlineInputBorder(
@@ -171,7 +171,7 @@ class _AddNewBankAccountState extends State<AddNewBankAccount> {
                           ),
                         ),
                         SizedBox(
-                          height: 30.h,
+                          height: 20.h,
                         ),
                         Container(
                           alignment: Alignment.topLeft,
@@ -191,8 +191,8 @@ class _AddNewBankAccountState extends State<AddNewBankAccount> {
                             decoration: InputDecoration(
                               hintText: 'Your Phone Number',
                               hintStyle: TextStyle(
-                                  fontSize: 18.sp,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16.sp,
+                                  // fontWeight: FontWeight.bold,
                                   color: AppColors.deep_grey),
                               filled: true,
                               border: OutlineInputBorder(
@@ -202,7 +202,7 @@ class _AddNewBankAccountState extends State<AddNewBankAccount> {
                           ),
                         ),
                         SizedBox(
-                          height: 50.h,
+                          height: 30.h,
                         ),
                         CustomButton(
                           onTap: () {

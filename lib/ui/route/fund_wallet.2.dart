@@ -113,7 +113,7 @@ class _FundWallet2State extends State<FundWallet2> {
                                 decoration: InputDecoration(
                                   hintText: 'Enter Amount',
                                   hintStyle: TextStyle(
-                                      fontSize: 20.sp,
+                                      fontSize: 16.sp,
                                       fontWeight: FontWeight.bold,
                                       color: AppColors.deep_grey),
                                   prefixIcon: Icon(Icons.account_balance),
@@ -224,16 +224,21 @@ class _FundWallet2State extends State<FundWallet2> {
                                       DropdownMenuItem(
                                         child: Row(
                                           children: [
-                                            Card(
-                                              color: Color.fromARGB(
-                                                  255, 2, 64, 114),
-                                              child: Text(
-                                                "VISA",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 16.sp,
-                                                    fontWeight:
-                                                        FontWeight.bold),
+                                            SizedBox(
+                                              width: 50.w,
+                                              child: Card(
+                                                color: Color.fromARGB(
+                                                    255, 2, 64, 114),
+                                                child: Center(
+                                                  child: Text(
+                                                    "VISA",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 13.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                             SizedBox(

@@ -113,7 +113,7 @@ class _FundWalletState extends State<FundWallet> {
                                 decoration: InputDecoration(
                                   hintText: 'Enter Amount',
                                   hintStyle: TextStyle(
-                                      fontSize: 20.sp,
+                                      fontSize: 16.sp,
                                       fontWeight: FontWeight.bold,
                                       color: AppColors.deep_grey),
                                   prefixIcon: Icon(Icons.account_balance),

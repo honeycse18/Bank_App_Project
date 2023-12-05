@@ -82,7 +82,7 @@ class _OnboardingState extends State<Onboarding> {
                     Text(
                       items[currentIndex]['title'],
                       style: TextStyle(
-                          fontSize: 25.sp,
+                          fontSize: 23.sp,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
@@ -92,7 +92,7 @@ class _OnboardingState extends State<Onboarding> {
                     Text(items[currentIndex]['description'],
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 18.sp,
+                            fontSize: 15.sp,
                             color: Colors.white,
                             fontWeight: FontWeight.bold)),
                     SizedBox(
@@ -116,13 +116,20 @@ class _OnboardingState extends State<Onboarding> {
                     SizedBox(
                       height: 30.h,
                     ),
-                    Text(
-                      'Try Sutraq',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20.sp),
-                    )
+                    GestureDetector(
+                      onTap: () =>
+                          Navigator.pushNamed(context, '/registration'),
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text: 'Try Sutraq',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18.sp),
+                        )
+                      ])),
+                    ),
                   ],
                 ),
               ),

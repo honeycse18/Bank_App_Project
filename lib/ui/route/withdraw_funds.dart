@@ -80,7 +80,7 @@ class _WithdrawFundsState extends State<WithdrawFunds> {
                   clipBehavior: Clip.none,
                   children: [
                     Container(
-                      height: 500.h,
+                      height: 400.h,
                       width: 450.w,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -113,7 +113,7 @@ class _WithdrawFundsState extends State<WithdrawFunds> {
                                 decoration: InputDecoration(
                                   hintText: '₦ Enter Amount',
                                   hintStyle: TextStyle(
-                                      fontSize: 20.sp,
+                                      fontSize: 16.sp,
                                       fontWeight: FontWeight.bold,
                                       color: AppColors.deep_grey),
                                   fillColor: Colors.transparent,
@@ -125,7 +125,7 @@ class _WithdrawFundsState extends State<WithdrawFunds> {
                               ),
                             ),
                             SizedBox(
-                              height: 30.h,
+                              height: 10.h,
                             ),
                             Column(
                               children: [
@@ -179,7 +179,7 @@ class _WithdrawFundsState extends State<WithdrawFunds> {
                                       DropdownMenuItem(
                                         child: Text("938103802(Access Bank)",
                                             style: TextStyle(
-                                              fontSize: 15.sp,
+                                              fontSize: 14.sp,
                                               color: AppColors.deep_grey,
                                               fontWeight: FontWeight.bold,
                                             )),
@@ -202,11 +202,11 @@ class _WithdrawFundsState extends State<WithdrawFunds> {
                               ],
                             ),
                             SizedBox(
-                              height: 40.h,
+                              height: 20.h,
                             ),
                             CustomButton(
                               onTap: () {
-                                //s   Navigator.pushNamed(context, '/');
+                                Navigator.pushNamed(context, '/bottomNavBar');
                               },
 
                               buttonText: 'PROCEED',
@@ -233,9 +233,9 @@ class _WithdrawFundsState extends State<WithdrawFunds> {
                                 borderRadius: BorderRadius.circular(20)),
                             child: Padding(
                               padding: const EdgeInsets.only(
-                                left: 20,
-                                top: 20,
-                                right: 20,
+                                left: 15,
+                                top: 15,
+                                right: 15,
                               ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,

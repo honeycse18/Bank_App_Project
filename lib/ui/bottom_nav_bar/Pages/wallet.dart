@@ -67,7 +67,7 @@ class Wallet extends StatelessWidget {
                                     builder: (context) {
                                       return Dialog(
                                         child: Container(
-                                          height: 300.h,
+                                          height: 310.h,
                                           width: 380.w,
                                           padding: EdgeInsets.only(
                                               top: 30,
@@ -162,7 +162,7 @@ class Wallet extends StatelessWidget {
                                               ),
                                               CustomButton(
                                                 onTap: () {},
-                                                buttonText: 'Fund Wallet',
+                                                buttonText: 'Done!',
                                                 style: TextStyle(
                                                     fontSize: 20.sp,
                                                     fontWeight:
@@ -193,7 +193,7 @@ class Wallet extends StatelessWidget {
                                     builder: (context) {
                                       return Dialog(
                                         child: Container(
-                                          height: 300.h,
+                                          height: 320.h,
                                           width: 380.w,
                                           padding: EdgeInsets.only(
                                               top: 30,
@@ -288,7 +288,7 @@ class Wallet extends StatelessWidget {
                                               ),
                                               CustomButton(
                                                 onTap: () {},
-                                                buttonText: 'Send Money',
+                                                buttonText: 'Done!',
                                                 style: TextStyle(
                                                     fontSize: 20.sp,
                                                     fontWeight:

@@ -11,6 +11,7 @@ import 'package:bank_app_project/ui/route/fund_wallet.2.dart';
 import 'package:bank_app_project/ui/route/fund_wallet.dart';
 import 'package:bank_app_project/ui/route/gotit.dart';
 import 'package:bank_app_project/ui/route/login.dart';
+import 'package:bank_app_project/ui/route/registration.dart';
 import 'package:bank_app_project/ui/route/transactions.dart';
 import 'package:bank_app_project/ui/route/withdraw_funds.dart';
 import 'package:flutter/cupertino.dart';
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
             '/addnewbank': (_) => AddNewBankAccount(),
             '/withdrawfunds': (_) => WithdrawFunds(),
             '/transaction': (_) => Transactions(),
+            '/registration': (_) => RegistrationPage(),
           },
           initialRoute: '/splash',
         );

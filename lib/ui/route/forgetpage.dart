@@ -59,7 +59,7 @@ class ForgetPage extends StatelessWidget {
               height: 15.h,
             ),
             Container(
-              height: 300.h,
+              //    height: 300.h,
               width: 300.w,
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.center,
@@ -180,7 +180,8 @@ class ForgetPage extends StatelessWidget {
                     },
 
                     buttonText: 'RECOVER PASSWORD',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
                     buttonColor: AppColors.deep_green,
                     textColor: Colors.white,
                     // BorderRadius: 10,
